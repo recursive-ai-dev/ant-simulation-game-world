@@ -1,0 +1,62 @@
+[build]
+  # Build command and directory
+  command = "npm run build"
+  publish = "dist"
+
+  # Environment variables for build
+  [build.environment]
+    NODE_VERSION = "22"
+    NPM_FLAGS = "--prefer-offline --no-audit"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self';"
+
+# Cache control for static assets
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Edge function for health checks (optional)
+[[edge_functions]]
+  function = "health-check"
+  path = "/api/health"
+
+# Resilience configuration
+[context.production]
+  [context.production.environment]
+    VITE_GAME_VERSION = "7.4.1"
+    VITE_DEPLOYMENT_ID = "production"
+
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    VITE_GAME_VERSION = "7.4.1-preview"
+    VITE_DEPLOYMENT_ID = "preview"
+
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    VITE_GAME_VERSION = "7.4.1-dev"
+    VITE_DEPLOYMENT_ID = "branch"
