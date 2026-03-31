@@ -44,5 +44,9 @@ coverage/
 # Audio generation cache (regenerable)
 public/audio/.cache/
 
+# Release packages
+*.zip
+!node_modules/
+
 # Windsurf specific
 .windsurf/

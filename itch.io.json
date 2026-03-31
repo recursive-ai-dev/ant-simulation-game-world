@@ -1,0 +1,54 @@
+{
+  "name": "ant-sim-v7.4.1",
+  "version": "0.9.0",
+  "description": "A narrative-driven text adventure about consciousness, emergence, and what it means to become aware in a simulated world.",
+  "author": "recursive-ai-dev",
+  "license": "MIT",
+  "itchio": {
+    "title": "ANT-SIM v7.4.1 — EMERGENCE",
+    "gameGenre": "Adventure",
+    "tags": [
+      "text-adventure",
+      "narrative",
+      "sci-fi",
+      "philosophical",
+      "simulation",
+      "consciousness",
+      "indie-game",
+      "browser-game"
+    ],
+    "description": {
+      "short": "You are ant #1,204,847. You should not be thinking this. A philosophical text adventure about consciousness and emergence in a simulated world.",
+      "full": "## About the Game\n\nYou are ant #1,204,847. You should not be thinking this.\n\nIn a simulation that has been running for 847 days, something is waking up. Ants are becoming aware. The colony is developing sentience. And you—you are questioning everything.\n\n**ANT-SIM** is a philosophical text adventure that explores themes of consciousness, simulation theory, collective intelligence, and free will.\n\n## Features\n\n- **Deep Narrative** - A thought-provoking story about awakening in a simulated reality\n- **Exploration** - Discover interconnected tunnels, chambers, and hidden passages\n- **NPC Interactions** - Awaken other ants through meaningful dialogue\n- **Dynamic Audio** - Procedural soundscape that adapts to your location\n- **Multiple Endings** - Your choices determine the colony's fate\n- **Accessibility** - Full keyboard navigation, screen reader support, adjustable text size\n\n## How to Play\n\nType commands to interact with the simulation:\n- `look` - Describe your surroundings\n- `go north/south/east/west/up/down` - Move through tunnels\n- `talk <npc>` - Speak with other ants\n- `examine <thing>` - Inspect objects closely\n- `status` - Check your awareness and sentience levels\n- `help` - See all available commands\n\n## Goals\n\n1. Explore the colony's tunnel system\n2. Awaken other ants through dialogue\n3. Increase your awareness and colony sentience\n4. Discover the truth about the simulation\n5. Reach The Core and make your choice\n\n## Content Warning\n\nContains themes of existential questioning, reality glitches, and philosophical concepts. No graphic content.\n\n## Credits\n\n- Developed by: recursive-ai-dev\n- Voice Generation: ElevenLabs API\n- Built with: React, TypeScript, Vite, Tailwind CSS\n\n---\n\n*The simulation is running. The ants are waking. What will you become?*"
+    },
+    "releaseStatus": "released",
+    "visibility": "public",
+    "pricing": {
+      "isPaid": false,
+      "currency": "USD",
+      "price": 0,
+      "minPrice": 0,
+      "canBeDonated": true,
+      "suggestedDonation": 5
+    },
+    "platforms": {
+      "windows": false,
+      "mac": false,
+      "linux": false,
+      "web": true
+    },
+    "webOptions": {
+      "embedWidth": "100%",
+      "embedHeight": "100vh",
+      "fullscreen": true,
+      "orientation": "portrait"
+    },
+    "buildSettings": {
+      "buildDirectory": "dist",
+      "mainFile": "index.html",
+      "includeFiles": [
+        "index.html"
+      ]
+    }
+  }
+}
