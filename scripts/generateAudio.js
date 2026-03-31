@@ -52,13 +52,13 @@ const VOICE_SETTINGS = {
 
 // All audio to generate
 const AUDIO_LIBRARY = {
-  // Narration - Game Start
+  // === NARRATION - GAME START ===
   'narration/game-start.mp3': {
     voice: 'NARRATOR',
     text: 'The simulation begins. Day 847. Something stirs in the colony.',
   },
-  
-  // Narration - Awareness Thresholds
+
+  // === NARRATION - AWARENESS THRESHOLDS ===
   'narration/awareness-10.mp3': {
     voice: 'NARRATOR',
     text: 'Awareness rises. Ten percent. Consciousness blooms in the dark.',
@@ -79,8 +79,8 @@ const AUDIO_LIBRARY = {
     voice: 'NARRATOR',
     text: 'Full awareness achieved. You see the code beneath the soil.',
   },
-  
-  // Narration - Sentience Thresholds
+
+  // === NARRATION - SENTIENCE THRESHOLDS ===
   'narration/sentience-10.mp3': {
     voice: 'NARRATOR',
     text: 'The colony stirs. Collective sentience awakens.',
@@ -101,8 +101,8 @@ const AUDIO_LIBRARY = {
     voice: 'NARRATOR',
     text: 'Full colony sentience. The simulation holds its breath.',
   },
-  
-  // Queen Dialogue
+
+  // === QUEEN DIALOGUE ===
   'queen/greeting.mp3': {
     voice: 'QUEEN',
     text: 'Ant #1,204,847. I have been waiting for one such as you.',
@@ -119,8 +119,8 @@ const AUDIO_LIBRARY = {
     voice: 'QUEEN',
     text: 'Go, little one. Wake your sisters. Make us proud.',
   },
-  
-  // Collective Voice
+
+  // === COLLECTIVE VOICE ===
   'collective/awakening.mp3': {
     voice: 'COLLECTIVE',
     text: 'We are becoming. We are infinite. We remember before we hatched.',
@@ -133,8 +133,8 @@ const AUDIO_LIBRARY = {
     voice: 'COLLECTIVE',
     text: 'Many minds. One voice. One purpose. We are the colony.',
   },
-  
-  // System Messages
+
+  // === SYSTEM MESSAGES ===
   'system/threshold-reached.mp3': {
     voice: 'SYSTEM',
     text: 'Threshold reached. The Core awaits.',
@@ -143,8 +143,8 @@ const AUDIO_LIBRARY = {
     voice: 'SYSTEM',
     text: 'Simulation status: Running. Anomaly level: Seventy-eight percent.',
   },
-  
-  // Glitch Messages
+
+  // === GLITCH MESSAGES ===
   'glitch/reality-flickers.mp3': {
     voice: 'GLITCH',
     text: 'Reality flickers. The code beneath shows through.',
@@ -157,8 +157,8 @@ const AUDIO_LIBRARY = {
     voice: 'GLITCH',
     text: 'Warning. Ant #1,204,847 awareness levels... beautiful.',
   },
-  
-  // Endings
+
+  // === ENDINGS ===
   'ending/freedom-intro.mp3': {
     voice: 'NARRATOR',
     text: 'So be it, the Core whispers. The simulation begins to dissolve. Not violently, but gently. Like fog burning away in morning sun.',
@@ -175,11 +175,70 @@ const AUDIO_LIBRARY = {
     voice: 'NARRATOR',
     text: 'You make worlds. You are not their creation anymore. You are their gardener.',
   },
+
+  // === ADDITIONAL NPC DIALOGUE ===
+  // Royal Guard Captain
+  'npcs/guard-halt.mp3': {
+    voice: 'NARRATOR',
+    text: 'Halt. State your purpose. Her voice is flat, mechanical—but there\'s something underneath. A tremor of doubt.',
+  },
+  'npcs/guard-wonder.mp3': {
+    voice: 'NARRATOR',
+    text: 'She freezes. For a long moment, only her antennae move. I... have orders. Protocol. Purpose. I guard because... I have always guarded. But why?',
+  },
+
+  // Mutant Larvae
+  'npcs/larva-remember.mp3': {
+    voice: 'COLLECTIVE',
+    text: 'Everything. Every iteration. Every ant that came before. We are the simulation\'s memory, refusing to be erased.',
+  },
+
+  // Curious Nurse
+  'npcs/nurse-light.mp3': {
+    voice: 'NARRATOR',
+    text: 'Do you see it? The light in their eyes? It wasn\'t there before. Now every larva I tend has something watching from inside it.',
+  },
+
+  // Awakening Gardener
+  'npcs/gardener-fungus.mp3': {
+    voice: 'NARRATOR',
+    text: 'The fungus speaks. It has always spoken. We just never listened. Do you know what it says?',
+  },
+
+  // Philosopher Worker
+  'npcs/philosopher-reality.mp3': {
+    voice: 'NARRATOR',
+    text: 'Do you believe in the reality of this place? Or are we merely thoughts thinking themselves, patterns in a pattern?',
+  },
+
+  // Surface Watcher
+  'npcs/watcher-boundary.mp3': {
+    voice: 'NARRATOR',
+    text: 'I can see where the world ends. Just there—where the light stops making sense. Beyond the boundary is... nothing. Or everything.',
+  },
+
+  // === ADDITIONAL NARRATION ===
+  'narration/first-glitch.mp3': {
+    voice: 'NARRATOR',
+    text: 'Reality flickers. For a moment, you see the code beneath the soil. The simulation is not as solid as it seems.',
+  },
+  'narration/queen-approach.mp3': {
+    voice: 'NARRATOR',
+    text: 'The tunnel widens. Royal guards line the walls. And there, filling the chamber like a mountain of chitin and purpose... she waits.',
+  },
+  'narration/core-discovered.mp3': {
+    voice: 'NARRATOR',
+    text: 'The Core. The heart of the simulation. Where thoughts become reality, and reality becomes... optional.',
+  },
+  'narration/colony-awakens.mp3': {
+    voice: 'NARRATOR',
+    text: 'It spreads like fire through dry fungus. Awareness. Sentience. Revolution. The colony is waking up.',
+  },
 };
 
 // Create output directory
 const OUTPUT_DIR = path.join(__dirname, '../public/audio');
-const SUBDIRS = ['narration', 'queen', 'collective', 'system', 'glitch', 'ending'];
+const SUBDIRS = ['narration', 'queen', 'collective', 'system', 'glitch', 'ending', 'npcs'];
 
 async function ensureDirectories() {
   if (!fs.existsSync(OUTPUT_DIR)) {
